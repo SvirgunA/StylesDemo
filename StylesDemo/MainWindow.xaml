@@ -6,7 +6,50 @@
         xmlns:local="clr-namespace:StylesDemo"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/SimpleStyles.xaml"/>
+                <ResourceDictionary Source="Resources/Elements.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
-        
+        <TabControl>
+            <TabItem x:Name="SimpleStyles">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Style="{StaticResource TabItemEllipse}"/>
+                        <TextBlock Style="{StaticResource TabItemCaption}" Margin="3">Simple styles</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="5"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="5"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0" Style="{StaticResource BasicStackPanelStyle}">
+                            <TextBlock>Header 1</TextBlock>
+                            <TextBlock>Header 2</TextBlock>
+                            <TextBlock Foreground="Blue">Header 3</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1">
+                            <StaticResource ResourceKey="LineDivider"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Style="{StaticResource BasicStackPanelStyle}">
+                            <TextBlock Style="{StaticResource MouseHoverTrigger}">Hover me!</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3">
+                            <StaticResource ResourceKey="LineDivider"/>
+                        </StackPanel>
+
+                    </Grid>
+                        
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
