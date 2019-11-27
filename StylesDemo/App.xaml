@@ -4,10 +4,17 @@
              xmlns:local="clr-namespace:StylesDemo"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style TargetType="TextBlock">
-            <Setter Property="Foreground" Value="Gray" />
-            <Setter Property="FontSize" Value="24" />
-            <Setter Property="Margin" Value="10,0,10,0"/>
+        
+
+        <Style TargetType="GroupBox">
+            <Setter Property="BorderBrush" Value="DarkCyan"/>
+            <Setter Property="HeaderTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" FontWeight="Bold" FontSize="10"/>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Application.Resources>
 </Application>
