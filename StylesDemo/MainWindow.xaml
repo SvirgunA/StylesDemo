@@ -100,7 +100,7 @@
                         <StackPanel Grid.Row="1">
                             <StaticResource ResourceKey="LineDivider"/>
                         </StackPanel>
-                        <StackPanel Grid.Row="2" Style="{StaticResource BasicStackPanelStyle}" Orientation="Vertical">
+                        <StackPanel Grid.Row="2" Style="{StaticResource BasicStackPanelStyle}" Orientation="Vertical" Width="150">
                             <CheckBox Name="cbSampleYes" Content="Yes" />
                             <CheckBox Name="cbSampleSure" Content="I'm sure" />
                             <TextBlock HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="28">
@@ -122,6 +122,19 @@
                                 </TextBlock.Style>
                             </TextBlock>
                         </StackPanel>
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem x:Name="AnimationsTrigger">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Style="{StaticResource TabItemEllipse}"/>
+                        <TextBlock Style="{StaticResource EmptyStyle}" Margin="3">Animation styles</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <Border Style="{StaticResource AnimatedStyle}"/>
                     </Grid>
                 </TabItem.Content>
             </TabItem>

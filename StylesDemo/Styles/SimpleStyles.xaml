@@ -43,28 +43,4 @@
         <Setter Property="FontSize" Value="24" />
         <Setter Property="Margin" Value="10,0,10,0"/>
     </Style>
-
-    <Style x:Key="EventTriggerStyle" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="16" />
-        <Style.Triggers>
-            <EventTrigger RoutedEvent="MouseEnter">
-                <EventTrigger.Actions>
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation Duration="0:0:0.300" Storyboard.TargetProperty="FontSize" To="28" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger.Actions>
-            </EventTrigger>
-            <EventTrigger RoutedEvent="MouseLeave">
-                <EventTrigger.Actions>
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation Duration="0:0:0.800" Storyboard.TargetProperty="FontSize" To="16" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger.Actions>
-            </EventTrigger>
-        </Style.Triggers>
-    </Style>
 </ResourceDictionary>
