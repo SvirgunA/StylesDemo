@@ -9,7 +9,7 @@
                     <Condition Property="IsMouseOver" Value="True" />
                 </MultiTrigger.Conditions>
                 <MultiTrigger.Setters>
-                    <Setter Property="Background" Value="#FF14875D" />
+                    <Setter Property="Background" Value="#FFF3CD1D" />
                 </MultiTrigger.Setters>
             </MultiTrigger>
         </Style.Triggers>
